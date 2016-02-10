@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C66CC009E9903E24864499E9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8807F928F2A4819BED620631 /* Pods.framework */; };
 		E363CC0F1C6B978C00EECF5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363CC0E1C6B978C00EECF5B /* AppDelegate.swift */; };
 		E363CC111C6B978C00EECF5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363CC101C6B978C00EECF5B /* ViewController.swift */; };
 		E363CC141C6B978C00EECF5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E363CC121C6B978C00EECF5B /* Main.storyboard */; };
 		E363CC161C6B978C00EECF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E363CC151C6B978C00EECF5B /* Assets.xcassets */; };
 		E363CC191C6B978C00EECF5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E363CC171C6B978C00EECF5B /* LaunchScreen.storyboard */; };
+		E363CC251C6B9A6600EECF5B /* twitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E363CC241C6B9A6600EECF5B /* twitterClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8807F928F2A4819BED620631 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF81508E6C935388BB07561 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E363CC0B1C6B978C00EECF5B /* twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E363CC0E1C6B978C00EECF5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E363CC101C6B978C00EECF5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		E363CC151C6B978C00EECF5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E363CC181C6B978C00EECF5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E363CC1A1C6B978C00EECF5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E363CC241C6B9A6600EECF5B /* twitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = twitterClient.swift; sourceTree = "<group>"; };
+		FCE3E730A0FFB019858A0B73 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66CC009E9903E24864499E9 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDC62A34B081BA9F1562D3D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8807F928F2A4819BED620631 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E363CC021C6B978C00EECF5B = {
 			isa = PBXGroup;
 			children = (
 				E363CC0D1C6B978C00EECF5B /* twitter */,
 				E363CC0C1C6B978C00EECF5B /* Products */,
+				EF8C7B4306C5FE5A4A03CDDB /* Pods */,
+				DDC62A34B081BA9F1562D3D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +71,7 @@
 		E363CC0D1C6B978C00EECF5B /* twitter */ = {
 			isa = PBXGroup;
 			children = (
+				E363CC231C6B98CF00EECF5B /* API */,
 				E363CC0E1C6B978C00EECF5B /* AppDelegate.swift */,
 				E363CC101C6B978C00EECF5B /* ViewController.swift */,
 				E363CC121C6B978C00EECF5B /* Main.storyboard */,
@@ -64,6 +82,23 @@
 			path = twitter;
 			sourceTree = "<group>";
 		};
+		E363CC231C6B98CF00EECF5B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E363CC241C6B9A6600EECF5B /* twitterClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		EF8C7B4306C5FE5A4A03CDDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FCE3E730A0FFB019858A0B73 /* Pods.debug.xcconfig */,
+				DAF81508E6C935388BB07561 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E363CC1D1C6B978C00EECF5B /* Build configuration list for PBXNativeTarget "twitter" */;
 			buildPhases = (
+				32DB45E598D5FF061D8609F9 /* Check Pods Manifest.lock */,
 				E363CC071C6B978C00EECF5B /* Sources */,
 				E363CC081C6B978C00EECF5B /* Frameworks */,
 				E363CC091C6B978C00EECF5B /* Resources */,
+				CD14936959301777E1A31563 /* Embed Pods Frameworks */,
+				CE37B09EE7F321EA940500DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,11 +168,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32DB45E598D5FF061D8609F9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD14936959301777E1A31563 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE37B09EE7F321EA940500DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E363CC071C6B978C00EECF5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E363CC251C6B9A6600EECF5B /* twitterClient.swift in Sources */,
 				E363CC111C6B978C00EECF5B /* ViewController.swift in Sources */,
 				E363CC0F1C6B978C00EECF5B /* AppDelegate.swift in Sources */,
 			);
@@ -245,23 +332,30 @@
 		};
 		E363CC1E1C6B978C00EECF5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCE3E730A0FFB019858A0B73 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = elanatee.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitter/twitter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E363CC1F1C6B978C00EECF5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAF81508E6C935388BB07561 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = elanatee.twitter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "twitter/twitter-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -284,6 +378,7 @@
 				E363CC1F1C6B978C00EECF5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
