@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     @IBAction func onLogin(sender: AnyObject) {
         twitterClient.sharedInstance.requestSerializer.removeAccessToken()
         
-        twitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "twitterdemoElana://oauth"), scope: nil, success: {
+        twitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "elanatee://oauth"), scope: nil, success: {
             (requestToken: BDBOAuth1Credential!) -> Void in
             print("Got the request token")
         }) {
             (error: NSError!) -> Void in
-            print("Failed to get request token")
+            print("Failed to get request token: \(error)")
         }
     }
 }
