@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "704F1861688043E33C40447422650363DCB5742A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "704F1861688043E33C40447422650363DCB5742A" : 0,
+    "809AD16FB6B97B738FBEFBB9A1EFFA1C042DE14E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EFC87290-206C-420B-90DF-BA8279239A33",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "704F1861688043E33C40447422650363DCB5742A" : "twitter\/",
+    "809AD16FB6B97B738FBEFBB9A1EFFA1C042DE14E" : "twitter\/twitter\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "twitter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "twitter.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/elanatee\/twitter-oauth.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "704F1861688043E33C40447422650363DCB5742A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/elanatee\/twitter-oauth.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "809AD16FB6B97B738FBEFBB9A1EFFA1C042DE14E"
+    }
+  ]
+}
