@@ -27,7 +27,7 @@
 			<string>elanatee.twitter</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>elanatee</string>
+				<string>elanatwitterdemo</string>
 			</array>
 		</dict>
 	</array>

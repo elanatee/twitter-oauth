@@ -20,15 +20,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onLogin(sender: AnyObject) {
-        twitterClient.sharedInstance.requestSerializer.removeAccessToken()
-        
-        twitterClient.sharedInstance.fetchRequestTokenWithPath("oauth/request_token", method: "GET", callbackURL: NSURL(string: "elanatee://oauth"), scope: nil, success: {
-            (requestToken: BDBOAuth1Credential!) -> Void in
-            print("Got the request token")
-        }) {
-            (error: NSError!) -> Void in
-            print("Failed to get request token: \(error)")
+        twitterClient.sharedInstance.loginWithCompletion(){
+            // pass in user if it exists or error if it exists
+            (user: User?, error: NSError?) in
+            if user != nil {
+                // perform segue
+                // if did login, take me to home timeline view
+                self.performSegueWithIdentifier("loginSegue", sender: self)
+            } else {
+                // handle login error
+            }
         }
+
     }
 }
 
