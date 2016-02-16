@@ -13,11 +13,29 @@ import BDBOAuth1Manager
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
+        
+        // check to see if there's a current user
+        if User.currentUser != nil {
+            // force to go to the logged in screen
+            print("current user detected: \(User.currentUser?.name)")
+            
+            // "hey storyboard, print me a new instance of the view controller that's IDed as the tweetsViewController" -tim
+            let vc = storyboard.instantiateViewControllerWithIdentifier("tweetsViewController") as UIViewController
+            window?.rootViewController = vc
+        }
+        
         return true
+    }
+    
+    func userDidLogout() {
+        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(application: UIApplication) {

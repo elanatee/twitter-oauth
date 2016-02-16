@@ -10,6 +10,9 @@ import UIKit
 
 // ???
 var _currentUser: User?
+let currentUserKey = "kCurrentUserKey"
+let userDidLoginNotification = "userDidLoginNotification"
+let userDidLogoutNotification = "userDidLogoutNotification"
 
 class User: NSObject {
     var name: String?
@@ -25,12 +28,33 @@ class User: NSObject {
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
         profileImageUrl = dictionary["profile_image_url"] as? String
-        tagline = dictionary["descriptoin"] as? String
+        tagline = dictionary["description"] as? String
+    }
+    
+    func logout() {
+        User.currentUser = nil
+        
+        // clear access token, remove all my permissions
+        twitterClient.sharedInstance.requestSerializer.removeAccessToken()
+        
+        // "tell anyone that's interested that this logout happened"
+        NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
     }
 
     // create type property
     class var currentUser: User? {
         get {
+            if _currentUser == nil {
+                let data = NSUserDefaults.standardUserDefaults().objectForKey(currentUserKey) as? NSData
+                if data != nil {
+                    do {
+                        let dictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions())
+                        _currentUser = User(dictionary: dictionary as! NSDictionary)
+                    } catch {
+        
+                    }
+                }
+            }
             return _currentUser
         }
         set(user){
@@ -41,14 +65,20 @@ class User: NSObject {
             if _currentUser != nil {
                 // try to store user
                 do {
+                    // if user isn't nil, change to json
                     let data = try NSJSONSerialization.dataWithJSONObject(user!.dictionary, options: NSJSONWritingOptions())
-                    
-                    
-                
+                    // store json here
+                    NSUserDefaults.standardUserDefaults().setObject(data, forKey: currentUserKey)
+                    // save/write to disk
+                    NSUserDefaults.standardUserDefaults().synchronize()
                 } catch {
                     print("error parsing json")
+
                 } // end catch
-            } // end if
+            } else {
+                NSUserDefaults.standardUserDefaults().setObject(nil, forKey: currentUserKey)
+            } // end else
+            NSUserDefaults.standardUserDefaults().synchronize()
         } // end set
     } // end class currentUser
 }

@@ -27,6 +27,20 @@ class twitterClient: BDBOAuth1SessionManager {
         return Static.instance
     }
     
+    func homeTimelineWithParams(params: NSDictionary?, completion: (tweets: [Tweet]?, error: NSError?) -> ()) {
+        
+        // home timeline endpoint
+        GET("1.1/statuses/home_timeline.json", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+            // print("home timeline: \(response)")
+            let tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
+            completion(tweets: tweets, error: nil)
+        }, failure: {(operation: NSURLSessionDataTask?, error: NSError!) -> Void in
+            print("error getting home timeline")
+            completion(tweets: nil, error: error)
+        })
+    }
+    
+    
     // initiate login process
     // if succeeds or fails, call completion block with either user or error
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()){
@@ -60,27 +74,24 @@ class twitterClient: BDBOAuth1SessionManager {
             twitterClient.sharedInstance.requestSerializer.saveAccessToken(accessToken)
             twitterClient.sharedInstance.GET("1.1/account/verify_credentials.json", parameters: nil, success: {(operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
                 // print("user: \(response)")
+                
+                // logging in
                 let user = User(dictionary: response as! NSDictionary)
+
+                // persists user as current user
+                User.currentUser = user
+                
                 print("user: \(user.name)")
                 self.loginCompletion?(user: user, error: nil)
             }, failure: {(operation: NSURLSessionDataTask?, error: NSError!) -> Void in
                     print("error getting current user")
                     self.loginCompletion?(user: nil, error: error)
             })
+
             
-            // home timeline endpoint
-            twitterClient.sharedInstance.GET("1.1/statuses/home_timeline.json", parameters: nil, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
-                // print("home timeline: \(response)")
-                let tweets = Tweet.tweetsWithArray(response as! [NSDictionary])
-                for tweet in tweets {
-                    print("text: \(tweet.text), created: \(tweet.createdAtString)")
-                }
-                }, failure: {(operation: NSURLSessionDataTask?, error: NSError!) -> Void in
-            })
-            
-            }) {
-                (error: NSError!) -> Void in
-                print("failed to receive access token")
+        }) {
+           (error: NSError!) -> Void in
+           print("failed to receive access token")
         }
     }
     
