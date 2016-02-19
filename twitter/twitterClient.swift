@@ -95,4 +95,18 @@ class twitterClient: BDBOAuth1SessionManager {
         }
     }
     
+    // initiate favorite process
+    func favoriteWithCompletion(params: NSDictionary?, completion: (tweet: Tweet?, error: NSError?) -> ()){
+        POST("1.1/favorites/create.json", parameters: params, success: { (oepration: NSURLSessionDataTask, response: AnyObject?) -> Void in
+            
+            let tweet = Tweet.tweetAsDictionary(response as! NSDictionary)
+            
+            completion(tweet: tweet, error: nil)
+            
+            }) { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
+                completion(tweet: nil, error: error)
+        }
+        
+    }
+    
 }

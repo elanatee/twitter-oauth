@@ -16,20 +16,25 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timePostedLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         profileView.layer.cornerRadius = 5
         profileView.clipsToBounds = true
-        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    @IBAction func onFavorite(sender: AnyObject) {
+        favoriteButton.setImage(UIImage(named: "like-action-on-pressed-red"), forState: UIControlState.Normal)        
+    
     }
 
 }

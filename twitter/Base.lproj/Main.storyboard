@@ -114,6 +114,14 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BO-14-05o">
+                                                    <rect key="frame" x="75" y="78" width="30" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <state key="normal" title="fav"/>
+                                                    <connections>
+                                                        <action selector="onFavorite:" destination="D6I-nY-hLE" eventType="touchUpInside" id="2KT-VE-F0k"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mtp-LB-prr" firstAttribute="centerY" secondItem="eLF-sh-WGF" secondAttribute="centerY" id="1GS-Vo-lee"/>
@@ -129,6 +137,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoriteButton" destination="6BO-14-05o" id="kao-7q-2S8"/>
                                             <outlet property="fullnameLabel" destination="eLF-sh-WGF" id="1ta-SF-w2b"/>
                                             <outlet property="profileView" destination="LDs-yF-sTZ" id="BGb-7h-ygF"/>
                                             <outlet property="timePostedLabel" destination="49Y-Qp-yNH" id="Uef-Fe-VL9"/>
