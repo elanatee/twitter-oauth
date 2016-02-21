@@ -29,6 +29,7 @@ class TweetCell: UITableViewCell {
             profileView.setImageWithURL(NSURL(string: tweet.user!.profileImageUrl!)!)
             retweetsLabel.text = String(tweet.retweetCount!)
             favoritesLabel.text = String(tweet.favoriteCount!)
+            timePostedLabel.text = tweet.timeSince
             
             if favoritesLabel.text == "0" {
                 favoritesLabel.hidden = true
@@ -38,6 +39,8 @@ class TweetCell: UITableViewCell {
             }
         }
     }
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -63,6 +66,9 @@ class TweetCell: UITableViewCell {
         } else {
             isFavorited = false
             sender.setImage(UIImage(named: "like-action-off"), forState: UIControlState.Normal)
+            if favoritesLabel.text == "1" {
+                favoritesLabel.hidden = true
+            }
             favoritesLabel.text = String(tweet.favoriteCount!)
         }
     }
@@ -78,6 +84,9 @@ class TweetCell: UITableViewCell {
         } else {
             isRetweeted = false
             sender.setImage(UIImage(named: "retweet-action_default"), forState: UIControlState.Normal)
+            if retweetsLabel.text == "1" {
+                retweetsLabel.hidden = true
+            }
             retweetsLabel.text = String(tweet.retweetCount!)
         }
     }
