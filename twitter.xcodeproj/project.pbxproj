@@ -107,7 +107,7 @@
 		E363CC0D1C6B978C00EECF5B /* twitter */ = {
 			isa = PBXGroup;
 			children = (
-				E3E444841C76C4D5005ED13D /* photos */,
+				E3E444841C76C4D5005ED13D /* images */,
 				E36978C71C7190B300F55399 /* Models */,
 				E363CC231C6B98CF00EECF5B /* API */,
 				E363CC0E1C6B978C00EECF5B /* AppDelegate.swift */,
@@ -139,7 +139,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		E3E444841C76C4D5005ED13D /* photos */ = {
+		E3E444841C76C4D5005ED13D /* images */ = {
 			isa = PBXGroup;
 			children = (
 				E3E444851C76C519005ED13D /* like-action-off.png */,
@@ -157,7 +157,7 @@
 				E3E444911C76C519005ED13D /* Twitter_logo_blue_32.png */,
 				E3E444921C76C519005ED13D /* Twitter_logo_blue_48.png */,
 			);
-			name = photos;
+			name = images;
 			sourceTree = "<group>";
 		};
 		EF8C7B4306C5FE5A4A03CDDB /* Pods */ = {
