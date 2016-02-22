@@ -13,7 +13,6 @@ class tweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tweets: [Tweet]?
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var favoriteButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
