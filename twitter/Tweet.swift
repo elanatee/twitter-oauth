@@ -60,5 +60,11 @@ class Tweet: NSObject {
         return tweets
     }
     
+    class func tweetAsDictionary(dict: NSDictionary) -> Tweet {
+        
+        let tweet = Tweet(dictionary: dict)
+        
+        return tweet
+    }
     
 }

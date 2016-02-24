@@ -52,5 +52,17 @@ class tweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         User.currentUser?.logout()
     }
     
-
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let tweetViewController = segue.destinationViewController as! singleTweetViewController
+        
+        tweetViewController.tweets = tweets![(indexPath?.row)!]
+        
+        print("prepare for segue called!!")
+    }
+    
 }

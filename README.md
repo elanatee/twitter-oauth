@@ -60,7 +60,7 @@ Describe any challenges encountered while building the app.
 
 # Project 5 - *twitter*
 
-Time spent: **X** hours spent in total
+Time spent: **3** hours spent in total
 
 ## User Stories
 
