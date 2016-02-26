@@ -20,20 +20,20 @@
 		E36978CB1C7191FB00F55399 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36978CA1C7191FB00F55399 /* Tweet.swift */; };
 		E36978CD1C72D7D800F55399 /* tweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36978CC1C72D7D800F55399 /* tweetsViewController.swift */; };
 		E36978CF1C72E4B600F55399 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36978CE1C72E4B600F55399 /* TweetCell.swift */; };
-		E3E444931C76C519005ED13D /* like-action-off.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444851C76C519005ED13D /* like-action-off.png */; };
-		E3E444941C76C519005ED13D /* like-action-on-pressed-red.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444861C76C519005ED13D /* like-action-on-pressed-red.png */; };
-		E3E444951C76C519005ED13D /* like-action-on-red.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444871C76C519005ED13D /* like-action-on-red.png */; };
-		E3E444961C76C519005ED13D /* like-action-pressed-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444881C76C519005ED13D /* like-action-pressed-grey.png */; };
-		E3E444971C76C519005ED13D /* reply-action_0.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444891C76C519005ED13D /* reply-action_0.png */; };
-		E3E444981C76C519005ED13D /* reply-action-pressed_0.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448A1C76C519005ED13D /* reply-action-pressed_0.png */; };
-		E3E444991C76C519005ED13D /* retweet-action_default.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448B1C76C519005ED13D /* retweet-action_default.png */; };
-		E3E4449A1C76C519005ED13D /* retweet-action-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448C1C76C519005ED13D /* retweet-action-inactive.png */; };
-		E3E4449B1C76C519005ED13D /* retweet-action-on-green.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448D1C76C519005ED13D /* retweet-action-on-green.png */; };
-		E3E4449C1C76C519005ED13D /* retweet-action-on-pressed_green.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448E1C76C519005ED13D /* retweet-action-on-pressed_green.png */; };
-		E3E4449D1C76C519005ED13D /* retweet-action-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E4448F1C76C519005ED13D /* retweet-action-pressed.png */; };
-		E3E4449E1C76C519005ED13D /* Twitter_logo_blue_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444901C76C519005ED13D /* Twitter_logo_blue_16.png */; };
-		E3E4449F1C76C519005ED13D /* Twitter_logo_blue_32.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444911C76C519005ED13D /* Twitter_logo_blue_32.png */; };
-		E3E444A01C76C519005ED13D /* Twitter_logo_blue_48.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E444921C76C519005ED13D /* Twitter_logo_blue_48.png */; };
+		E38AE61C1C7FE26400B30045 /* like-action-off.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE60E1C7FE26400B30045 /* like-action-off.png */; };
+		E38AE61D1C7FE26400B30045 /* like-action-on-pressed-red.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE60F1C7FE26400B30045 /* like-action-on-pressed-red.png */; };
+		E38AE61E1C7FE26400B30045 /* like-action-on-red.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6101C7FE26400B30045 /* like-action-on-red.png */; };
+		E38AE61F1C7FE26400B30045 /* like-action-pressed-grey.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6111C7FE26400B30045 /* like-action-pressed-grey.png */; };
+		E38AE6201C7FE26400B30045 /* reply-action-pressed_0.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6121C7FE26400B30045 /* reply-action-pressed_0.png */; };
+		E38AE6211C7FE26400B30045 /* reply-action_0.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6131C7FE26400B30045 /* reply-action_0.png */; };
+		E38AE6221C7FE26400B30045 /* retweet-action-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6141C7FE26400B30045 /* retweet-action-inactive.png */; };
+		E38AE6231C7FE26400B30045 /* retweet-action-on-green.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6151C7FE26400B30045 /* retweet-action-on-green.png */; };
+		E38AE6241C7FE26400B30045 /* retweet-action-on-pressed_green.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6161C7FE26400B30045 /* retweet-action-on-pressed_green.png */; };
+		E38AE6251C7FE26400B30045 /* retweet-action-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6171C7FE26400B30045 /* retweet-action-pressed.png */; };
+		E38AE6261C7FE26400B30045 /* retweet-action_default.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6181C7FE26400B30045 /* retweet-action_default.png */; };
+		E38AE6271C7FE26400B30045 /* Twitter_logo_blue_16.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE6191C7FE26400B30045 /* Twitter_logo_blue_16.png */; };
+		E38AE6281C7FE26400B30045 /* Twitter_logo_blue_32.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE61A1C7FE26400B30045 /* Twitter_logo_blue_32.png */; };
+		E38AE6291C7FE26400B30045 /* Twitter_logo_blue_48.png in Resources */ = {isa = PBXBuildFile; fileRef = E38AE61B1C7FE26400B30045 /* Twitter_logo_blue_48.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,20 +53,20 @@
 		E36978CA1C7191FB00F55399 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		E36978CC1C72D7D800F55399 /* tweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tweetsViewController.swift; sourceTree = "<group>"; };
 		E36978CE1C72E4B600F55399 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
-		E3E444851C76C519005ED13D /* like-action-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "like-action-off.png"; path = "../../../../twitter images/like-action-off.png"; sourceTree = "<group>"; };
-		E3E444861C76C519005ED13D /* like-action-on-pressed-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "like-action-on-pressed-red.png"; path = "../../../../twitter images/like-action-on-pressed-red.png"; sourceTree = "<group>"; };
-		E3E444871C76C519005ED13D /* like-action-on-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "like-action-on-red.png"; path = "../../../../twitter images/like-action-on-red.png"; sourceTree = "<group>"; };
-		E3E444881C76C519005ED13D /* like-action-pressed-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "like-action-pressed-grey.png"; path = "../../../../twitter images/like-action-pressed-grey.png"; sourceTree = "<group>"; };
-		E3E444891C76C519005ED13D /* reply-action_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reply-action_0.png"; path = "../../../../twitter images/reply-action_0.png"; sourceTree = "<group>"; };
-		E3E4448A1C76C519005ED13D /* reply-action-pressed_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reply-action-pressed_0.png"; path = "../../../../twitter images/reply-action-pressed_0.png"; sourceTree = "<group>"; };
-		E3E4448B1C76C519005ED13D /* retweet-action_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "retweet-action_default.png"; path = "../../../../twitter images/retweet-action_default.png"; sourceTree = "<group>"; };
-		E3E4448C1C76C519005ED13D /* retweet-action-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "retweet-action-inactive.png"; path = "../../../../twitter images/retweet-action-inactive.png"; sourceTree = "<group>"; };
-		E3E4448D1C76C519005ED13D /* retweet-action-on-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "retweet-action-on-green.png"; path = "../../../../twitter images/retweet-action-on-green.png"; sourceTree = "<group>"; };
-		E3E4448E1C76C519005ED13D /* retweet-action-on-pressed_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "retweet-action-on-pressed_green.png"; path = "../../../../twitter images/retweet-action-on-pressed_green.png"; sourceTree = "<group>"; };
-		E3E4448F1C76C519005ED13D /* retweet-action-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "retweet-action-pressed.png"; path = "../../../../twitter images/retweet-action-pressed.png"; sourceTree = "<group>"; };
-		E3E444901C76C519005ED13D /* Twitter_logo_blue_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_logo_blue_16.png; path = "../../../../twitter images/Twitter_logo_blue_16.png"; sourceTree = "<group>"; };
-		E3E444911C76C519005ED13D /* Twitter_logo_blue_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_logo_blue_32.png; path = "../../../../twitter images/Twitter_logo_blue_32.png"; sourceTree = "<group>"; };
-		E3E444921C76C519005ED13D /* Twitter_logo_blue_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Twitter_logo_blue_48.png; path = "../../../../twitter images/Twitter_logo_blue_48.png"; sourceTree = "<group>"; };
+		E38AE60E1C7FE26400B30045 /* like-action-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-action-off.png"; sourceTree = "<group>"; };
+		E38AE60F1C7FE26400B30045 /* like-action-on-pressed-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-action-on-pressed-red.png"; sourceTree = "<group>"; };
+		E38AE6101C7FE26400B30045 /* like-action-on-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-action-on-red.png"; sourceTree = "<group>"; };
+		E38AE6111C7FE26400B30045 /* like-action-pressed-grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-action-pressed-grey.png"; sourceTree = "<group>"; };
+		E38AE6121C7FE26400B30045 /* reply-action-pressed_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reply-action-pressed_0.png"; sourceTree = "<group>"; };
+		E38AE6131C7FE26400B30045 /* reply-action_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reply-action_0.png"; sourceTree = "<group>"; };
+		E38AE6141C7FE26400B30045 /* retweet-action-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet-action-inactive.png"; sourceTree = "<group>"; };
+		E38AE6151C7FE26400B30045 /* retweet-action-on-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet-action-on-green.png"; sourceTree = "<group>"; };
+		E38AE6161C7FE26400B30045 /* retweet-action-on-pressed_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet-action-on-pressed_green.png"; sourceTree = "<group>"; };
+		E38AE6171C7FE26400B30045 /* retweet-action-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet-action-pressed.png"; sourceTree = "<group>"; };
+		E38AE6181C7FE26400B30045 /* retweet-action_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retweet-action_default.png"; sourceTree = "<group>"; };
+		E38AE6191C7FE26400B30045 /* Twitter_logo_blue_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue_16.png; sourceTree = "<group>"; };
+		E38AE61A1C7FE26400B30045 /* Twitter_logo_blue_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue_32.png; sourceTree = "<group>"; };
+		E38AE61B1C7FE26400B30045 /* Twitter_logo_blue_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter_logo_blue_48.png; sourceTree = "<group>"; };
 		FCE3E730A0FFB019858A0B73 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,7 @@
 		E363CC0D1C6B978C00EECF5B /* twitter */ = {
 			isa = PBXGroup;
 			children = (
-				E3E444841C76C4D5005ED13D /* images */,
+				E38AE60D1C7FE26400B30045 /* twitter images */,
 				E36978C71C7190B300F55399 /* Models */,
 				E363CC231C6B98CF00EECF5B /* API */,
 				E363CC0E1C6B978C00EECF5B /* AppDelegate.swift */,
@@ -145,25 +145,25 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		E3E444841C76C4D5005ED13D /* images */ = {
+		E38AE60D1C7FE26400B30045 /* twitter images */ = {
 			isa = PBXGroup;
 			children = (
-				E3E444851C76C519005ED13D /* like-action-off.png */,
-				E3E444861C76C519005ED13D /* like-action-on-pressed-red.png */,
-				E3E444871C76C519005ED13D /* like-action-on-red.png */,
-				E3E444881C76C519005ED13D /* like-action-pressed-grey.png */,
-				E3E444891C76C519005ED13D /* reply-action_0.png */,
-				E3E4448A1C76C519005ED13D /* reply-action-pressed_0.png */,
-				E3E4448B1C76C519005ED13D /* retweet-action_default.png */,
-				E3E4448C1C76C519005ED13D /* retweet-action-inactive.png */,
-				E3E4448D1C76C519005ED13D /* retweet-action-on-green.png */,
-				E3E4448E1C76C519005ED13D /* retweet-action-on-pressed_green.png */,
-				E3E4448F1C76C519005ED13D /* retweet-action-pressed.png */,
-				E3E444901C76C519005ED13D /* Twitter_logo_blue_16.png */,
-				E3E444911C76C519005ED13D /* Twitter_logo_blue_32.png */,
-				E3E444921C76C519005ED13D /* Twitter_logo_blue_48.png */,
+				E38AE60E1C7FE26400B30045 /* like-action-off.png */,
+				E38AE60F1C7FE26400B30045 /* like-action-on-pressed-red.png */,
+				E38AE6101C7FE26400B30045 /* like-action-on-red.png */,
+				E38AE6111C7FE26400B30045 /* like-action-pressed-grey.png */,
+				E38AE6121C7FE26400B30045 /* reply-action-pressed_0.png */,
+				E38AE6131C7FE26400B30045 /* reply-action_0.png */,
+				E38AE6141C7FE26400B30045 /* retweet-action-inactive.png */,
+				E38AE6151C7FE26400B30045 /* retweet-action-on-green.png */,
+				E38AE6161C7FE26400B30045 /* retweet-action-on-pressed_green.png */,
+				E38AE6171C7FE26400B30045 /* retweet-action-pressed.png */,
+				E38AE6181C7FE26400B30045 /* retweet-action_default.png */,
+				E38AE6191C7FE26400B30045 /* Twitter_logo_blue_16.png */,
+				E38AE61A1C7FE26400B30045 /* Twitter_logo_blue_32.png */,
+				E38AE61B1C7FE26400B30045 /* Twitter_logo_blue_48.png */,
 			);
-			name = images;
+			path = "twitter images";
 			sourceTree = "<group>";
 		};
 		EF8C7B4306C5FE5A4A03CDDB /* Pods */ = {
@@ -236,23 +236,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E444941C76C519005ED13D /* like-action-on-pressed-red.png in Resources */,
+				E38AE6261C7FE26400B30045 /* retweet-action_default.png in Resources */,
+				E38AE61D1C7FE26400B30045 /* like-action-on-pressed-red.png in Resources */,
+				E38AE6211C7FE26400B30045 /* reply-action_0.png in Resources */,
 				E363CC191C6B978C00EECF5B /* LaunchScreen.storyboard in Resources */,
+				E38AE6221C7FE26400B30045 /* retweet-action-inactive.png in Resources */,
 				E363CC161C6B978C00EECF5B /* Assets.xcassets in Resources */,
-				E3E444971C76C519005ED13D /* reply-action_0.png in Resources */,
-				E3E444991C76C519005ED13D /* retweet-action_default.png in Resources */,
-				E3E444981C76C519005ED13D /* reply-action-pressed_0.png in Resources */,
-				E3E4449A1C76C519005ED13D /* retweet-action-inactive.png in Resources */,
-				E3E444931C76C519005ED13D /* like-action-off.png in Resources */,
-				E3E4449C1C76C519005ED13D /* retweet-action-on-pressed_green.png in Resources */,
-				E3E444A01C76C519005ED13D /* Twitter_logo_blue_48.png in Resources */,
-				E3E4449F1C76C519005ED13D /* Twitter_logo_blue_32.png in Resources */,
+				E38AE61C1C7FE26400B30045 /* like-action-off.png in Resources */,
 				E363CC141C6B978C00EECF5B /* Main.storyboard in Resources */,
-				E3E4449B1C76C519005ED13D /* retweet-action-on-green.png in Resources */,
-				E3E4449E1C76C519005ED13D /* Twitter_logo_blue_16.png in Resources */,
-				E3E4449D1C76C519005ED13D /* retweet-action-pressed.png in Resources */,
-				E3E444961C76C519005ED13D /* like-action-pressed-grey.png in Resources */,
-				E3E444951C76C519005ED13D /* like-action-on-red.png in Resources */,
+				E38AE61F1C7FE26400B30045 /* like-action-pressed-grey.png in Resources */,
+				E38AE6291C7FE26400B30045 /* Twitter_logo_blue_48.png in Resources */,
+				E38AE6281C7FE26400B30045 /* Twitter_logo_blue_32.png in Resources */,
+				E38AE6231C7FE26400B30045 /* retweet-action-on-green.png in Resources */,
+				E38AE6201C7FE26400B30045 /* reply-action-pressed_0.png in Resources */,
+				E38AE6271C7FE26400B30045 /* Twitter_logo_blue_16.png in Resources */,
+				E38AE6251C7FE26400B30045 /* retweet-action-pressed.png in Resources */,
+				E38AE6241C7FE26400B30045 /* retweet-action-on-pressed_green.png in Resources */,
+				E38AE61E1C7FE26400B30045 /* like-action-on-red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

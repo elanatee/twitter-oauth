@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("current user detected: \(User.currentUser?.name)")
             
             // "hey storyboard, print me a new instance of the view controller that's IDed as the tweetsViewController" -tim
-            let vc = storyboard.instantiateViewControllerWithIdentifier("tweetsViewController") as UIViewController
+            let vc = storyboard.instantiateViewControllerWithIdentifier("tweetsNavigation") as! UINavigationController
             window?.rootViewController = vc
         }
         
