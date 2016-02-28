@@ -15,16 +15,30 @@ class singleTweetViewController: UIViewController {
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var retweetsLabel: UILabel!
+    @IBOutlet weak var favoritesLabel: UILabel!
+    @IBOutlet weak var retweetLabel: UILabel!
+    @IBOutlet weak var favoriteLabel: UILabel!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         profilePic.layer.cornerRadius = 5
         profilePic.clipsToBounds = true
+        
         profilePic.setImageWithURL(NSURL(string:(tweets.user?.profileImageUrl)!)!)
         fullnameLabel.text = tweets.user?.name!
         usernameLabel.text = "@\(tweets!.user!.screenname!)"
         tweetLabel.text = tweets.text!
+        retweetsLabel.text = String(tweets.retweetCount!)
+        favoritesLabel.text = String(tweets.favoriteCount!)
+        
+        if favoritesLabel.text == "1" {
+            favoriteLabel.text = "FAVORITE"
+        }
+        if retweetsLabel.text == "1" {
+            retweetLabel.text = "RETWEET"
+        }
         
     }
 

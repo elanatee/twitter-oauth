@@ -150,7 +150,6 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mtp-LB-prr" firstAttribute="centerY" secondItem="eLF-sh-WGF" secondAttribute="centerY" id="1GS-Vo-lee"/>
-                                                <constraint firstItem="jMP-mh-kDY" firstAttribute="centerY" secondItem="u5x-aW-lcH" secondAttribute="centerY" id="3Pt-v3-8rn"/>
                                                 <constraint firstItem="6BO-14-05o" firstAttribute="leading" secondItem="jMP-mh-kDY" secondAttribute="trailing" constant="13" id="3Rb-2w-vYb"/>
                                                 <constraint firstItem="LDs-yF-sTZ" firstAttribute="top" secondItem="0yH-DG-Dvx" secondAttribute="top" constant="8" id="3fc-IP-TDF"/>
                                                 <constraint firstItem="bxH-5q-Saw" firstAttribute="leading" secondItem="6BO-14-05o" secondAttribute="trailing" constant="8" id="5hn-QZ-c3w"/>
@@ -164,14 +163,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="bxH-5q-Saw" secondAttribute="bottom" constant="2.5" id="PP8-F0-ITB"/>
                                                 <constraint firstItem="u5x-aW-lcH" firstAttribute="leading" secondItem="gHm-Mm-7aJ" secondAttribute="trailing" constant="22" id="RP9-cD-jAX"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bxH-5q-Saw" secondAttribute="trailing" constant="30" id="Rgy-Af-qEa"/>
-                                                <constraint firstItem="bxH-5q-Saw" firstAttribute="centerY" secondItem="6BO-14-05o" secondAttribute="centerY" id="Sei-3O-70U"/>
                                                 <constraint firstItem="4LE-7T-qVj" firstAttribute="top" secondItem="eLF-sh-WGF" secondAttribute="bottom" constant="5" id="Tsg-5Q-FlO"/>
                                                 <constraint firstItem="LDs-yF-sTZ" firstAttribute="leading" secondItem="0yH-DG-Dvx" secondAttribute="leading" constant="8" id="USX-Mo-NtL"/>
                                                 <constraint firstAttribute="bottom" secondItem="6BO-14-05o" secondAttribute="bottom" constant="2.5" id="YsC-OM-HZP"/>
                                                 <constraint firstItem="mtp-LB-prr" firstAttribute="top" secondItem="0yH-DG-Dvx" secondAttribute="top" constant="8" id="a4m-9F-XuE"/>
                                                 <constraint firstItem="u5x-aW-lcH" firstAttribute="centerY" secondItem="gHm-Mm-7aJ" secondAttribute="centerY" id="cTk-C2-pxH"/>
                                                 <constraint firstAttribute="bottom" secondItem="jMP-mh-kDY" secondAttribute="bottom" constant="2.5" id="d5Y-f4-hk9"/>
-                                                <constraint firstItem="6BO-14-05o" firstAttribute="centerY" secondItem="u5x-aW-lcH" secondAttribute="centerY" id="fmJ-Bd-C9o"/>
                                                 <constraint firstAttribute="trailing" secondItem="4LE-7T-qVj" secondAttribute="trailing" constant="8" id="iwM-LC-KtX"/>
                                                 <constraint firstAttribute="bottom" secondItem="gHm-Mm-7aJ" secondAttribute="bottom" constant="2.5" id="izX-de-U88"/>
                                                 <constraint firstItem="eLF-sh-WGF" firstAttribute="top" secondItem="0yH-DG-Dvx" secondAttribute="top" constant="8" id="ne2-vT-qFL"/>
@@ -214,7 +211,7 @@
             </objects>
             <point key="canvasLocation" x="1470" y="319"/>
         </scene>
-        <!--Single Tweet View Controller-->
+        <!--twitter-->
         <scene sceneID="VFE-3Z-pYT">
             <objects>
                 <viewController id="oWc-yU-8Gi" customClass="singleTweetViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -334,11 +331,15 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="n4D-q3-rwp"/>
+                    <navigationItem key="navigationItem" title="twitter" id="n4D-q3-rwp"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favoriteLabel" destination="6pR-rK-uub" id="JGG-vR-94r"/>
+                        <outlet property="favoritesLabel" destination="OMQ-ky-WOO" id="oVQ-sI-mxY"/>
                         <outlet property="fullnameLabel" destination="Fw8-fS-V1Z" id="ie1-nk-uBu"/>
                         <outlet property="profilePic" destination="X1d-GE-wj7" id="bUo-y8-wyf"/>
+                        <outlet property="retweetLabel" destination="RrP-ot-2Vl" id="JSH-6k-NHP"/>
+                        <outlet property="retweetsLabel" destination="sRF-iX-6RH" id="k4E-TI-Liv"/>
                         <outlet property="tweetLabel" destination="pqV-i9-sN6" id="62W-z6-QXE"/>
                         <outlet property="usernameLabel" destination="Z4J-62-3Le" id="oNP-Fd-Rp4"/>
                         <segue destination="5PX-iF-TAv" kind="push" identifier="profileSegue" id="NqI-NN-4r4"/>
@@ -370,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrP-tg-0ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261" y="319"/>
+            <point key="canvasLocation" x="2303" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="H8L-Jf-lqq">
