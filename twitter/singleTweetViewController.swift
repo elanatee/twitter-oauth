@@ -48,15 +48,24 @@ class singleTweetViewController: UIViewController {
     }
     
 
-/*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        /*let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! TweetCell
+        */
+        
+        let tweet = tweets!
+        let user = tweet.user
+        
+        let composevc = segue.destinationViewController as! composeViewController
+        composevc.tweets = tweet
+        composevc.user = user
         
     }
-  */  
+  
 
 }

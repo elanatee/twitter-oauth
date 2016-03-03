@@ -38,24 +38,8 @@ class twitterClient: BDBOAuth1SessionManager {
             completion(tweets: nil, error: error)
         })
     }
-    /*
-    func favoriteWithCompletion(params: NSDictionary?, completion: (tweet: Tweet?, error: NSError?) -> ()){
-        POST("1.1/favorites/create.json", parameters: params, success: { (operation: NSURLSessionDataTask, response: AnyObject?) -> Void in
-            
-            var tweet = Tweet.tweetAsDictionary(response as! NSDictionary)
-            
-            print("retweetCount: \(tweet.retweetCount)")
-            print("favCount: \(tweet.favoriteCount)")
-            
-            completion(tweet: tweet, error: nil)
-            
-            }) { (operation: NSURLSessionDataTask?, error: NSError) -> Void in
-                print("ERROR: \(error)")
-                completion(tweet: nil, error: error)
-        }
-    }
     
-    */
+    
     // initiate login process
     // if succeeds or fails, call completion block with either user or error
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()){
@@ -127,6 +111,16 @@ class twitterClient: BDBOAuth1SessionManager {
             completion(error: nil)
             }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
                 print("tweet not favorited")
+                completion(error: error)
+            }
+        )
+    }
+    
+    func compose(tweet: String, params: NSDictionary?, completion: (error: NSError?) -> () ){
+        POST("1.1/statuses/update.json?status=\(tweet)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
+            print("just tweeted \(tweet)!")
+            completion(error: nil)
+            }, failure: { (operation: NSURLSessionDataTask?, error: NSError!) -> Void in
                 completion(error: error)
             }
         )
