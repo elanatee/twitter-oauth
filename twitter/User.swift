@@ -21,6 +21,12 @@ class User: NSObject {
     var tagline: String?
     var dictionary: NSDictionary
     
+    // for part 2
+    var followers_count: Int?
+    var following_count: Int?
+    var coverPhotoUrl: String?
+    var tweets_count: Int?
+    
     // special constructor that accepts dict and deserializes dict into
     init(dictionary: NSDictionary){
         self.dictionary = dictionary
@@ -29,6 +35,12 @@ class User: NSObject {
         screenname = dictionary["screen_name"] as? String
         profileImageUrl = dictionary["profile_image_url"] as? String
         tagline = dictionary["description"] as? String
+        
+        // for part 2
+        followers_count = dictionary["followers_count"] as? Int
+        following_count = dictionary["friends_count"] as? Int
+        coverPhotoUrl = dictionary["profile_background_image_url"] as? String
+        tweets_count = dictionary["statuses_count"] as? Int
     }
     
     func logout() {

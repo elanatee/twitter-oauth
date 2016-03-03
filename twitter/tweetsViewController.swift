@@ -39,30 +39,72 @@ class tweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.selectionStyle = .None
         cell.tweet = tweets![indexPath.row]
-        
+        /*
+        cell.profileView.userInteractionEnabled = true
+        let tapped = UITapGestureRecognizer(target: self, action: "tappedProfileView:")
+        tapped.numberOfTapsRequired = 1
+        cell.profileView.addGestureRecognizer(tapped)
+        */
         return cell
     }
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    /*
+    func tappedProfileView(gesture: UITapGestureRecognizer){
+        performSegueWithIdentifier("toProfilePage", sender: nil)
     }
-    
+    */
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }
+    /*
+    @IBAction func segueToProfilePage(sender: AnyObject) {
+        print("about to segue to profile page!")
+        
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! TweetCell
+        
+        let indexPath = tableView.indexPathForCell(cell)
+        let tweet = tweets![indexPath!.row]
+        let user = tweet.user
+        
+        let profilePageViewController = segue.destinationViewController as! profileViewController
+        profilePageViewController.user = user
+    }*/
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPathForCell(cell)
-        let tweetViewController = segue.destinationViewController as! singleTweetViewController
-        
-        tweetViewController.tweets = tweets![(indexPath?.row)!]
-        
-        print("prepare for segue called!!")
+        if segue.identifier == "toTweetPage" {
+            print("going to tweet page!")
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweetViewController = segue.destinationViewController as! singleTweetViewController
+            
+            tweetViewController.tweets = tweets![(indexPath?.row)!]
+        }
+        else if segue.identifier == "toProfilePage" {
+            print("going to profile page")
+            
+            let button = sender as! UIButton
+            let view = button.superview!
+            let cell = view.superview as! TweetCell
+            
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweet = tweets![indexPath!.row]
+            let user = tweet.user
+            
+            let profilePageViewController = segue.destinationViewController as! profileViewController
+            profilePageViewController.tweets = tweet
+            profilePageViewController.user = user
+        }
     }
     
 }
