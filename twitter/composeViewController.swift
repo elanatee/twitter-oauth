@@ -21,6 +21,9 @@ class composeViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tweetField.delegate = self
+        
         profilePic.layer.cornerRadius = 5
         profilePic.clipsToBounds = true
         profilePic.setImageWithURL(NSURL(string:(User.currentUser?.profileImageUrl!)!)!)
@@ -31,19 +34,22 @@ class composeViewController: UIViewController, UITextViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func sendTweet(sender: AnyObject) {
-        tweetToSend = tweetField.text
+        //let tweet = tweetToSend.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let tweet = tweetField.text
         
-        let tweet = tweetToSend.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-                
-        twitterClient.sharedInstance.compose(tweet!, params: nil, completion: { (error) -> () in
-            print("about to tweet")
-        })
+        twitterClient.sharedInstance.compose(tweet)
         dismissViewControllerAnimated(true, completion: {})
     }
+    
+    /*
+    func textViewDidChange(textView: UITextView) {
+        tweetToSend = tweetField.text
+        print("updated")
+    }
+    */
     
     @IBAction func cancelTweet(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: {})

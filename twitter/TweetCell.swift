@@ -11,8 +11,6 @@ import UIKit
 
 class TweetCell: UITableViewCell {
 
-    var isFavorited = false
-    var isRetweeted = false
     @IBOutlet weak var profileView: UIImageView!
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -43,8 +41,6 @@ class TweetCell: UITableViewCell {
         }
     }
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -58,42 +54,45 @@ class TweetCell: UITableViewCell {
     }
     
     @IBAction func onFavorite(sender: AnyObject) {
-        twitterClient.sharedInstance.favorite(Int(tweetID!)!, params: nil) { (error) -> () in
-            if !self.isFavorited {
-                self.isFavorited = true
+        if tweet.isFavorited == false {
+            twitterClient.sharedInstance.favorite(Int(tweetID!)!, params: nil) { (error) -> () in
                 sender.setImage(UIImage(named: "like-action-on-pressed-red"), forState: UIControlState.Normal)
                 if self.favoritesLabel.text == "0" {
                     self.favoritesLabel.hidden = false
                 }
                 self.favoritesLabel.text = String(self.tweet.favoriteCount! + 1)
-            } else {
-                self.isFavorited = false
-                sender.setImage(UIImage(named: "like-action-off"), forState: UIControlState.Normal)
-                if self.favoritesLabel.text == "1" {
-                    self.favoritesLabel.hidden = true
-                }
-                self.favoritesLabel.text = String(self.tweet.favoriteCount!)
             }
+        } else {
+            // unfavorite if tweet is already favorited
+            twitterClient.sharedInstance.unfavorite(Int(tweetID!)!)
+            sender.setImage(UIImage(named: "like-action-off"), forState: UIControlState.Normal)
+            if self.favoritesLabel.text == "1" {
+                self.favoritesLabel.hidden = true
+            }
+            self.favoritesLabel.text = String(self.tweet.favoriteCount!)
         }
+        tweet.isFavorited = !tweet.isFavorited
     }
 
     @IBAction func onRetweet(sender: AnyObject) {
-        twitterClient.sharedInstance.retweet(Int(tweetID!)!, params: nil) { (error) -> () in
-            if !self.isRetweeted {
-                self.isRetweeted = true
-                sender.setImage(UIImage(named: "retweet-action-on-pressed_green"), forState: UIControlState.Normal)
-                if self.retweetsLabel.text == "0" {
-                    self.retweetsLabel.hidden = false
-                }
-                self.retweetsLabel.text = String(self.tweet.retweetCount! + 1)
-            } else {
-                self.isRetweeted = false
-                sender.setImage(UIImage(named: "retweet-action_default"), forState: UIControlState.Normal)
-                if self.retweetsLabel.text == "1" {
-                    self.retweetsLabel.hidden = true
-                }
-                self.retweetsLabel.text = String(self.tweet.retweetCount!)
+        if tweet.isRetweeted == false {
+            twitterClient.sharedInstance.retweet(Int(tweetID!)!, params: nil) { (error) -> () in
+                    sender.setImage(UIImage(named: "retweet-action-on-pressed_green"), forState: UIControlState.Normal)
+                    if self.retweetsLabel.text == "0" {
+                        self.retweetsLabel.hidden = false
+                    }
+                    self.retweetsLabel.text = String(self.tweet.retweetCount! + 1)
             }
+        } else {
+            // unretweet if already retweeted
+            twitterClient.sharedInstance.unretweet(Int(tweetID!)!)
+            sender.setImage(UIImage(named: "retweet-action_default"), forState: UIControlState.Normal)
+            if self.retweetsLabel.text == "1" {
+                self.retweetsLabel.hidden = true
+            }
+            self.retweetsLabel.text = String(self.tweet.retweetCount!)
         }
+        tweet.isRetweeted = !tweet.isRetweeted
     }
 }
+

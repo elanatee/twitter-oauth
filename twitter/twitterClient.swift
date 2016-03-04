@@ -105,6 +105,15 @@ class twitterClient: BDBOAuth1SessionManager {
         )
     }
     
+    func unretweet(id: Int) {
+        POST("1.1/statuses/unretweet/\(id).json", parameters: nil,  success: { (operation, response) -> Void in
+            print("succesfully untweeted")
+            }, failure: { (operation, error) -> Void in
+                print("error untweeting")
+        })
+    }
+    
+    
     func favorite(id: Int, params: NSDictionary?, completion: (error: NSError?) -> () ){
         POST("1.1/favorites/create.json?id=\(id)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
             print("favorited tweet with id: \(id)")
@@ -116,6 +125,16 @@ class twitterClient: BDBOAuth1SessionManager {
         )
     }
     
+    func unfavorite(id: Int) {
+        POST("1.1/favorites/destroy.json", parameters: ["id": id], success: { (operation, response) -> Void in
+            print("succesfully unfavorited")
+            
+            }, failure: { (operation, error) -> Void in
+                print("error unfavoriting")
+        })
+    }
+
+    /*
     func compose(tweet: String, params: NSDictionary?, completion: (error: NSError?) -> () ){
         POST("1.1/statuses/update.json?status=\(tweet)", parameters: params, success: { (operation: NSURLSessionDataTask!, response: AnyObject?) -> Void in
             print("just tweeted \(tweet)!")
@@ -124,6 +143,14 @@ class twitterClient: BDBOAuth1SessionManager {
                 completion(error: error)
             }
         )
-    }
+    }*/
     
+    func compose(status: String) {
+        POST("1.1/statuses/update.json", parameters: ["status": status], success: { (operation, response) -> Void in
+            print("succesfully tweeted")
+            
+            }, failure: { (operation, error) -> Void in
+                print("error tweeting")
+        })
+    }
 }
